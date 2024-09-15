@@ -1,0 +1,31 @@
+//Este codigo fue realizado el 02 de septiembre del 2024.
+//Realiza una cruz con asteriscos dependiendo del tamaño que el ususrio ingrese.
+package cruz;
+import java.util.Scanner;
+public class Cruz {
+    public static void main(String[] args) {
+        Scanner leer=new Scanner(System.in);
+        int tam=0;
+        System.out.println("Ingrese el tamano del arreglo");
+        tam=leer.nextInt();
+        char[][]matriz =new char [tam][tam];
+        for(int i=0; i<tam;i++){
+            for(int j=0; j<tam; j++){
+                if((i==j)||(i+j==tam -1)){
+                    matriz [i][j]='*';
+                }else {
+                    matriz[i][j]=' ';
+                }
+                 
+            }
+        }
+        for(int i=0; i<tam;i++){
+            for(int j=0;j<tam;j++){
+                System.out.print(matriz[i][j]);
+            }
+            System.out.println("");
+        }
+        
+    }
+    
+}
